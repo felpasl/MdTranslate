@@ -1,4 +1,4 @@
-# Markdown Translate
+# Markdown Translator
 This project translate a markdown without losing formatting.
 
 Any kind of help will be welcome!

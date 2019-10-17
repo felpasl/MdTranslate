@@ -1,4 +1,4 @@
-﻿# Markdown traduzir
+﻿# Tradutor de Markdown
 Este projeto traduz um Markdown sem perder a formatação.
 
 Qualquer tipo de ajuda será bem-vinda!
