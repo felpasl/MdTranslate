@@ -1,13 +1,8 @@
-﻿using Markdig;
-using Markdig.Syntax;
-using Markdig.Syntax.Inlines;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 
-namespace MdTranslate
+namespace MdTranslator
 {
     class Program
     {

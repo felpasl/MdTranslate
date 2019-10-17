@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MdTranslate.Lib.TranslateProviders.Azure
+namespace MdTranslator.Lib.TranslateProviders.Azure
 {
     /// <summary>
     /// The C# classes that represents the JSON returned by the Translator Text API.

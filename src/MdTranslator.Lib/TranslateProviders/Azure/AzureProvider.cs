@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace MdTranslate.Lib.TranslateProviders.Azure
+namespace MdTranslator.Lib.TranslateProviders.Azure
 {
     public class AzureProvider : ITranslateProvider
     {

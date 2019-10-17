@@ -1,0 +1,28 @@
+orbs:
+  homebrew: izumin5210/github-release@0.0.1
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.0
+    steps:
+      - checkout
+      - run:
+          name: Restore packages
+          command:
+            dotnet restore
+      - run:
+          name: Build App
+          command:
+            dotnet build
+      - run: 
+          name: Publish
+          command:
+            dotnet publish -c Release -o /build/out
+  github/release:
+          tag: v$CIRCLE_BUILD_NUM
+          title: Release v$CIRCLE_BUILD_NUM
+          filters:
+            branches:
+              only: master
+

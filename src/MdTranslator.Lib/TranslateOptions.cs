@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MdTranslate.Lib
+﻿namespace MdTranslator.Lib
 {
     public class TranslateOptions
     {
@@ -16,7 +12,4 @@ namespace MdTranslate.Lib
             Google,
         };
     }
- 
-
-
 }

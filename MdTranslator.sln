@@ -9,9 +9,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Itens", "Solution 
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MdTranslate", "src\MdTranslate\MdTranslate.csproj", "{C5EB3494-FE45-4706-BD3F-41AD9CFA3226}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MdTranslator", "src\MdTranslator\MdTranslator.csproj", "{C5EB3494-FE45-4706-BD3F-41AD9CFA3226}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MdTranslate.Lib", "src\MdTranslate.Lib\MdTranslate.Lib.csproj", "{03DD076E-790A-4A0A-8A2A-9448C2D58AB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MdTranslator.Lib", "src\MdTranslator.Lib\MdTranslator.Lib.csproj", "{03DD076E-790A-4A0A-8A2A-9448C2D58AB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EEAF6ECE-3216-4983-9D15-94B647BB98E0}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

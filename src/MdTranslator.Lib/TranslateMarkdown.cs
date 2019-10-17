@@ -1,9 +1,7 @@
-﻿using MdTranslate.Lib.TranslateProviders;
+﻿using MdTranslator.Lib.TranslateProviders;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace MdTranslate.Lib
+namespace MdTranslator.Lib
 {
     public class TranslateMarkdown
     {

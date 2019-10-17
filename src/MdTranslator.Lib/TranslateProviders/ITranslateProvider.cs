@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MdTranslate.Lib.TranslateProviders
+namespace MdTranslator.Lib.TranslateProviders
 {
     public interface ITranslateProvider
     {

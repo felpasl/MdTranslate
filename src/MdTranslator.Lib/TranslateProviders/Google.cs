@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MdTranslate.Lib.TranslateProviders
+namespace MdTranslator.Lib.TranslateProviders
 {
-    public class Amazon: ITranslateProvider
+    public class Google : ITranslateProvider
     {
         private string key;
 
-        public Amazon(string key)
+        public Google(string key)
         {
             this.key = key;
         }
