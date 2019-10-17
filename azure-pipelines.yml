@@ -47,12 +47,8 @@ steps:
     repositoryName: 'felpasl/MdTranslator'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
+    tagSource: gitTag
+    tag: $(Build.BuildNumber)      
     assets: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
