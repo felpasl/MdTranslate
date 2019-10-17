@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'linux-latest'
 
 variables:
   solution: '**/*.sln'
@@ -19,7 +19,7 @@ steps:
   inputs:
     command: 'restore'
     feedsToUse: 'config'
-    nugetConfigPath: 'Nuget/nuget.config'
+    nugetConfigPath: '$(Build.SourcesDirectory)Nuget/nuget.config'
 
 - task: VSBuild@1
   inputs:
