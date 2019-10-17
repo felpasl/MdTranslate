@@ -13,6 +13,10 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  MajorVersion: 0
+  MinorVersion: 0
+  InitialReleaseTagNumber: 1
+  IncrementReleaseTagNumber: $[counter(variables['InitialReleaseTagNumber'], 0)]
 
 steps:
 - task: DotNetCoreCLI@2
@@ -47,8 +51,8 @@ steps:
     repositoryName: 'felpasl/MdTranslator'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    tagSource: gitTag
-    tag: $(Build.BuildNumber)      
+    tagSource: 'gitTag'
+    tagPattern: 'v$(MajorVersion).$(MinorVersion).$(IncrementReleaseTagNumber)'
     assets: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
