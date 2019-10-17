@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MdTranslate": {
+      "commandName": "Project",
+      "commandLineArgs": "--md-input mdSample.md --output-language pt-br "
+    }
+  }
+}
