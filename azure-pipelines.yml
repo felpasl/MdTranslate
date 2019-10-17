@@ -21,13 +21,17 @@ steps:
     feedsToUse: 'config'
     nugetConfigPath: '$(Build.SourcesDirectory)/Nuget/nuget.config'
 
-- task: VSBuild@1
+- task: DotNetCoreCLI@2
   inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(Build.BinariesDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: 'build'
+    projects: '$(Build.SourcesDirectory)\\src\\MdTranslator\\MdTranslator.csproj'
 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: '$(Build.SourcesDirectory)\\src\\MdTranslator\\MdTranslator.csproj'
+    
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
