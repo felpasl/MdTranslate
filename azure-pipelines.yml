@@ -24,13 +24,13 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: '$(Build.SourcesDirectory)\\src\\MdTranslator\\MdTranslator.csproj'
+    projects: '$(Build.SourcesDirectory)/src/MdTranslator/MdTranslator.csproj'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
     publishWebProjects: false
-    projects: '$(Build.SourcesDirectory)\\src\\MdTranslator\\MdTranslator.csproj'
+    projects: '$(Build.SourcesDirectory)/src/MdTranslator/MdTranslator.csproj'
     
 - task: ArchiveFiles@2
   inputs:
