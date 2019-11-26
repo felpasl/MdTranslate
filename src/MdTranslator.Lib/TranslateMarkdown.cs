@@ -7,12 +7,9 @@ namespace MdTranslator.Lib
     {
         MarkdownParser Parser;
         ITranslateProvider Provider;
+
         public TranslateMarkdown(TranslateOptions options)
         {
-            if (options == null)
-                throw new ArgumentNullException("TranslateOptions");
-            if (options.Key == null)
-                throw new ArgumentNullException("TranslateOptions.Key");
             this.Parser = new MarkdownParser();
             this.Provider = TranslateProviderFactory.CreateProvider(options);
         }

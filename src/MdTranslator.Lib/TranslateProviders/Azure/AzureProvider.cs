@@ -10,7 +10,6 @@ namespace MdTranslator.Lib.TranslateProviders.Azure
 {
     public class AzureProvider : ITranslateProvider
     {
-        private string key;
         private const string key_var = "AZURE_TRANSLATOR_TEXT_SUBSCRIPTION_KEY";
         private string subscriptionKey = Environment.GetEnvironmentVariable(key_var);
 
@@ -19,11 +18,10 @@ namespace MdTranslator.Lib.TranslateProviders.Azure
 
         public AzureProvider(string key, string endpoint)
         {
-            if (subscriptionKey == null)
+            if (this.subscriptionKey == null)
                 this.subscriptionKey = key;
             if (this.endpoint == null)
                 this.endpoint = endpoint;
-            this.key = key;
         }
         public TranslateText Translate(TranslateText text, string originalLanguage, string destinationLanguage)
         {

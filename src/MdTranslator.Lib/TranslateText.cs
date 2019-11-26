@@ -22,14 +22,15 @@ namespace MdTranslator.Lib
 
         public void WriteTranslate(string[] translated)
         {
+            int i = 0;
             foreach (string translatedItem in translated)
             {
                 if (translatedItem != null)
                 {
-                    var index = translated.ToList().IndexOf(translatedItem);
-                    if (this.ElementAtOrDefault(index) != null)
-                        this[index].TranslatedTerm = translatedItem;
+                    if (this.ElementAtOrDefault(i) != null)
+                        this[i].TranslatedTerm = translatedItem;
                 }
+                i++;
             }
         }
     }

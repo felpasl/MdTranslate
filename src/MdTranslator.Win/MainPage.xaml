@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="MdTranslator.Win.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MdTranslator.Win"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="MdTranslator" TextWrapping="Wrap" FontSize="25" VerticalAlignment="Top" Height="32" Width="161" Grid.Column="0" Grid.Row="0"/>
+        <Button Content="Open File" Margin="10,9,0,9" Click="OpenFile_Click" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" Width="93"/>
+        <TextBlock Margin="10,9,13,9" Text="" TextWrapping="Wrap" Name="inputText" Grid.Column="0" Grid.Row="2"/>
+        <TextBlock Margin="10,9,13,9" Text="" TextWrapping="Wrap" Name="outputText" Grid.Column="1" Grid.Row="2"/>
+        <TextBlock Margin="10,12,0,0" Text="Provider:" Grid.Column="1" HorizontalAlignment="Left" Width="68" Height="32" VerticalAlignment="Top"/>
+        <ComboBox Grid.Column="1" Margin="92,9,0,0" Width="218" Name="provider" SelectionChanged="provider_SelectionChanged">
+        </ComboBox>
+        <TextBlock Margin="328,12,0,0" Text="Language: i.e. en, pt-br" Grid.Column="1" HorizontalAlignment="Left" Width="151" Height="32" VerticalAlignment="Top"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="475,0,0,0" Text="en" TextWrapping="Wrap" VerticalAlignment="Center" Width="84" Name="outputLanguage"/>
+        <Button Content="Translate" Grid.Column="1" Margin="10,9,0,0" Grid.Row="1" Width="166" VerticalAlignment="Top" Click="TranslateButton_Click"/>
+
+    </Grid>
+</Page>
