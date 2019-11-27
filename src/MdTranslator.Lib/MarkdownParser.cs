@@ -4,6 +4,7 @@ using Markdig.Syntax;
 using Markdig.Syntax.Inlines;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MdTranslator.Lib
 {
@@ -20,6 +21,7 @@ namespace MdTranslator.Lib
                 if (line != null)
                     translateLines.AddRange(line);
             }
+            translateLines = new TranslateText(translateLines.Where(l => !string.IsNullOrWhiteSpace(l.OrigTerm)).ToList());
             translateLines.ForEach((item) => Console.WriteLine($"{item.Line} - {item.OrigTerm}"));
             return translateLines;
         }

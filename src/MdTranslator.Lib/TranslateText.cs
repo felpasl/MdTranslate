@@ -6,6 +6,14 @@ namespace MdTranslator.Lib
 {
     public class TranslateText : List<TranslateLine>
     {
+        public TranslateText()
+        {
+               
+        }
+        public TranslateText(List<TranslateLine> list)
+        {
+            this.AddRange(list);
+        }
         public string OriginalLanguage { get; set; }
         public string DestinationLanguage { get; set; }
 
